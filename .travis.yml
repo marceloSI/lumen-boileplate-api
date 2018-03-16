@@ -1,23 +1,15 @@
-sudo: false
-
 language: php
-
-matrix:
-  fast_finish: true
-  include:
-    - php: 7
-      env:
-        - CS_CHECK=true
+php:
+  - 7.1.9
 
 before_install:
   - composer self-update
 
-install:
-  - travis_retry composer install --no-interaction --prefer-source --no-scripts
+before_script:
+  - curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar  
 
-script:
-  - composer test
-  - if [[ $CS_CHECK == 'true' ]]; then composer cs-check ; fi
+install: 
+  - ./bin/ci/install_dependencies.sh
+  - php vendor/vendors.php
 
-notifications:
-  email: true
+script: vendor/bin/phpunit  
