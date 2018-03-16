@@ -1,5 +1,7 @@
 # Lumen boilerplate api
 
+This api is created with lumen running on PHP 7.
+
 ## Docker
 
 For development, we use [docker-compose](https://docs.docker.com/compose/);
