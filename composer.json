@@ -1,7 +1,13 @@
 {
     "name": "laravel/lumen",
-    "description": "The Laravel Lumen Framework.",
-    "keywords": ["framework", "laravel", "lumen"],
+    "description": "Lumen api boilerplate.",
+    "keywords": [
+        "framework", 
+        "laravel", 
+        "lumen",
+        "api",
+        "psr"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
